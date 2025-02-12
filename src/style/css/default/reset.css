@@ -91,6 +91,7 @@ video {
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
+  text-decoration-line: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -129,8 +130,19 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "SCDream";
+  src: url("../../font/SCDream5.otf");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../font/PretendardVariable.woff2");
+}
+
 body {
   height: 100%;
+  font-family: "Pretendard", "SCDream", monospace;
 }
 
 #root {
