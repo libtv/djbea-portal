@@ -42,7 +42,7 @@
   height: 95px;
 }
 
-.depth1 > li > a {
+li > a {
   display: flex;
   align-items: center;
   height: 100%;
@@ -55,22 +55,23 @@
 }
 
 /* depth 2 */
-.depth2 {
+.depth-cont {
   width: 100vw;
-  height: 696px;
+  height: 300px;
   position: absolute;
   left: 0;
   top: 130px;
   box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.1);
   border-radius: 0px 0px 50px 50px;
   display: flex;
+  justify-content: left;
 }
 
 .depth-tit {
   width: 25%;
   height: 100%;
   border-radius: 0 50px 0 50px;
-  padding-left: calc((100vw - 1400px) / 2);
+  padding-left: calc((100vw - 1400px) / 5);
   padding-top: 47px;
   background-color: #f6f1f1;
 }
@@ -78,10 +79,94 @@
 .depth-tit strong {
   display: block;
   position: relative;
-  padding: 19px 0 0 15px;
+  padding: 19px 0 0 20px;
   color: #1d1f26;
   font-size: 32px;
   font-weight: 700;
+}
+
+.depth-tit span {
+  display: block;
+  margin-bottom: 5px;
+  color: #7a7d86;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.depth2 {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 0 0 50px 0;
+  border-top: 1px solid #eaeaee;
+}
+
+.depth2 > li {
+  display: flex;
+}
+
+.depth2::before {
+  content: " ";
+  height: 100%;
+  position: absolute;
+  background-color: #867a7a;
+  top: 0;
+  width: 300px;
+  left: -70px;
+  z-index: -500;
+}
+
+.depth2 > li > a {
+  display: flex;
+  width: 230px;
+  height: auto;
+  padding: 15px 0 15px 25px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: #867a7a;
+}
+
+.depth3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 0 0 50px 0;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  align-items: flex-start;
+}
+
+.depth3 > li {
+  position: relative;
+  margin-top: 10px;
+  margin-right: 20px;
+  padding-left: 20px;
+}
+
+.depth3 > li > a {
+  display: block;
+  position: relative;
+  padding-left: 10px;
+  line-height: 1.5rem;
+  color: #444;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+.depth3 > li > a::before {
+  content: " ";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #7a7d86;
+  border-radius: 4px;
+  top: 10px;
+  left: 0;
 }
 
 #logo {
@@ -117,6 +202,10 @@
     position: relative;
   }
 
+  .depth-cont > .depth-tit {
+    display: none;
+  }
+
   .depth1 {
     width: 314px;
     height: 100vh;
@@ -130,5 +219,71 @@
 
   .depth1 li + li {
     margin-left: 0;
+  }
+
+  .depth1 > li > a {
+    height: 60px;
+    color: #31343d;
+    font-size: 18px;
+    font-weight: 600;
+    background: #f1f2f3;
+    padding: 0 20px;
+    color: #1d1f26;
+  }
+
+  .depth-tit {
+    display: none;
+  }
+
+  .depth-cont {
+    display: block;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .depth2 {
+    padding: 0;
+  }
+
+  .depth2::before {
+    display: none;
+  }
+
+  .depth2 > li {
+    display: block;
+  }
+
+  .depth2 > li > a {
+    height: 60px;
+    color: #31343d;
+    font-size: 18px;
+    font-weight: 600;
+    background: #867a7a;
+    padding: 0 20px;
+    color: white;
+    width: 100%;
+  }
+
+  .depth3 {
+    display: block;
+    border-radius: 0;
+  }
+
+  .depth3 > li {
+    margin: 0;
+  }
+
+  .depth3 > li > a {
+    padding: 9px 12px !important;
+    color: #444;
+    font-size: 16px;
+    border-top-width: 0;
+    background: transparent;
+  }
+
+  .depth3 > li > a::before {
+    top: 16px;
   }
 }

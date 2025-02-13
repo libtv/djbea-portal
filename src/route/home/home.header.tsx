@@ -16,33 +16,57 @@ export function HomeHeader() {
                 <a href="#">
                   <i>사업공고</i>
                 </a>
-                <ul className="depth2">
+                <div className="depth-cont">
                   <div className="depth-tit">
                     <strong>
                       <span>일류 경제도시 대전</span>사업공고
                     </strong>
                   </div>
-                  <li>
-                    <a href="#">
-                      <i>사업공고</i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i>입찰공고</i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i>입주공고</i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i>채용공고</i>
-                    </a>
-                  </li>
-                </ul>
+                  <ul className="depth2">
+                    <li>
+                      <a href="#">
+                        <i>사업공고</i>
+                      </a>
+                      <ul className="depth3">
+                        <li>
+                          <a href="#">
+                            <i>사업공고</i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i>입찰공고</i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i>입주공고</i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i>채용공고</i>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i>입찰공고</i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i>입주공고</i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i>채용공고</i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li>
                 <a href="#">
