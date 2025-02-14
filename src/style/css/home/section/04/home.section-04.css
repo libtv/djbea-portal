@@ -1,0 +1,42 @@
+.wrap-field {
+  position: relative;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+
+.field-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 40px;
+  border: 1px solid #eaeaee;
+  border-radius: 20px 20px 0 0;
+  background: #fff;
+}
+
+.tab-list li {
+  display: inline-block;
+  width: auto;
+}
+
+.tab-list li a {
+  display: block;
+  position: relative;
+  height: 58px;
+  padding: 0 26px;
+  line-height: 58px;
+  color: #444;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.field-body {
+  overflow: hidden;
+  position: relative;
+  height: 340px;
+  border: 1px solid #f3d6d6;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  background: #fef3f1;
+}
