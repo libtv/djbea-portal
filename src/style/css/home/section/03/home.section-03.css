@@ -1,0 +1,145 @@
+.section-03 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrap-story {
+  position: relative;
+  width: calc(50% - 25px);
+}
+
+.wrap-story:nth-child(2) {
+  margin-left: 50px;
+}
+
+.wrap-story2 {
+  position: relative;
+  width: calc(50% - 15px);
+}
+
+.wrap-tit {
+  padding-bottom: 20px;
+}
+
+.wrap-tit b {
+  color: #df1128;
+  font-weight: 700;
+}
+
+.story-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.story-cont {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: calc(50% - 14px);
+  border-radius: 20px;
+  box-shadow: 0px 7px 15px 8px rgba(0, 0, 0, 0.1);
+}
+
+.story-cont2 {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: calc(100%);
+  border-radius: 20px;
+  box-shadow: 0px 7px 15px 8px rgba(0, 0, 0, 0.1);
+}
+
+.story-cont .story-img {
+  overflow: hidden;
+  width: 100%;
+  height: 210px;
+}
+
+.story-cont .story-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.story-cont .story-tit {
+  height: 88px;
+  padding: 25px 30px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.story-cont .story-tit strong {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 2em;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.story-cont2 .story-img {
+  overflow: hidden;
+  width: 100%;
+  height: 210px;
+}
+
+.story-cont2 .story-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.story-cont2 .story-tit {
+  height: 88px;
+  padding: 25px 30px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.story-cont2 .story-tit strong {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 2em;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+/* mobile */
+@media (max-width: 720px) {
+  .section-03 {
+    display: block;
+  }
+
+  .wrap-story {
+    position: relative;
+    width: calc(100% - 25px);
+    margin-bottom: 30px;
+  }
+
+  .wrap-story:nth-child(2) {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1200px) {
+  .section-03 {
+    display: block;
+  }
+
+  .wrap-story {
+    position: relative;
+    width: calc(100% - 25px);
+    margin-bottom: 30px;
+  }
+
+  .wrap-story:nth-child(2) {
+    margin-left: 0px;
+  }
+}

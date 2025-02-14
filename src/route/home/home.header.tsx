@@ -7,7 +7,7 @@ export function HomeHeader() {
         <div className="home-header-top"></div>
         <div className="home-header-main">
           <h1 id="logo">
-            <a href="/">대전광역시</a>
+            <a href="/">대전일자리경제진흥원</a>
           </h1>
 
           <div className="header-nav">

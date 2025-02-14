@@ -69,10 +69,18 @@
 }
 
 /* mobile */
-@media (max-width: 600px) {
+@media (max-width: 720px) {
+  .section-02 {
+    display: block;
+  }
+
+  .section-02 .wrap-tit {
+    width: 150px;
+  }
+
   .wrap-service li {
     display: block;
-    width: calc((100% / 3) - 16px);
+    width: calc((100% / 4) - 16px);
   }
 
   .wrap-service {
@@ -85,7 +93,7 @@
   }
 }
 
-@media (min-width: 601px) and (max-width: 1200px) {
+@media (min-width: 721px) and (max-width: 1200px) {
   .section-02 .wrap-tit {
     width: 150px;
   }

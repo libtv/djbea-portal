@@ -1,0 +1,8 @@
+.margin-left-50 {
+  margin-left: 50px;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}

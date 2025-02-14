@@ -106,7 +106,41 @@
 }
 
 /* mobile */
-@media (max-width: 1200px) {
+@media (max-width: 720px) {
+  .section-01 {
+    height: auto;
+  }
+
+  .srh-visual {
+    display: block;
+    position: relative;
+  }
+
+  .swiper-box {
+    width: calc(100% - 48px);
+    margin: 0 auto 20px auto;
+  }
+
+  .srh-news {
+    width: calc(100vw - 48px);
+    margin: 0 auto;
+  }
+
+  .srh-total {
+    width: calc(100vw - 48px);
+  }
+
+  .srh-recom {
+    width: calc(100vw - 48px);
+  }
+
+  .recom-list li {
+    margin-left: 10px;
+  }
+}
+
+/* mobile */
+@media (min-width: 721px) and (max-width: 1200px) {
   .section-01 {
     height: auto;
   }
@@ -122,7 +156,7 @@
   }
 
   .srh-news {
-    width: 700px;
+    width: calc(100vw - 48px);
     margin: 0 auto;
   }
 }

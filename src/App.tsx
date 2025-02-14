@@ -1,5 +1,6 @@
 import React from "react";
 import "./style/css/default/reset.css";
+import "./style/css/default/common.css";
 import { Routes, Route } from "react-router-dom";
 import { HomeProvider } from "./route/home/home.provider";
 import { HomeHeader } from "./route/home/home.header";
@@ -15,7 +16,8 @@ function App() {
             <HomeHeader />
             <HomeContext />
           </HomeProvider>
-        }></Route>
+        }
+      ></Route>
     </Routes>
   );
 }
