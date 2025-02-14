@@ -65,6 +65,7 @@ li > a {
   border-radius: 0px 0px 50px 50px;
   display: flex;
   justify-content: left;
+  display: none; /* TODO 제거 요청 */
 }
 
 .depth-tit {
@@ -182,7 +183,7 @@ li > a {
   background: url("https://www.daejeon.go.kr/images/drh/layout/common/logo_2024.png") no-repeat center / 100%;
 }
 
-/* header */
+/* mobile */
 @media (max-width: 1200px) {
   .home-header {
     width: 100%;
