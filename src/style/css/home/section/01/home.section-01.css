@@ -1,6 +1,6 @@
 .section-01 {
   width: 100%;
-  height: 614px;
+  height: 100%;
   position: relative;
   padding: 35px 0 0 0;
 }
@@ -81,6 +81,7 @@
 .srh-visual {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 40px;
 }
 
 .swiper-box {
@@ -117,12 +118,13 @@
   }
 
   .swiper-box {
-    width: calc(100% - 48px);
+    width: calc(100%);
+    height: calc(100%);
     margin: 0 auto 20px auto;
   }
 
   .srh-news {
-    width: calc(100vw - 48px);
+    width: calc(100%);
     margin: 0 auto;
   }
 

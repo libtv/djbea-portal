@@ -120,7 +120,7 @@
 
   .wrap-story {
     position: relative;
-    width: calc(100% - 25px);
+    width: calc(100%);
     margin-bottom: 80px;
   }
 

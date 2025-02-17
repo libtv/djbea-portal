@@ -4,6 +4,18 @@
   position: relative;
 }
 
+.section-02::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(100vw - 17px);
+  height: 100%;
+  transform: translateX(-50%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(245, 246, 246, 1) 100%);
+  z-index: -1;
+}
+
 .section-02 .wrap-tit {
   width: 210px;
   margin-top: 19px;
@@ -90,6 +102,7 @@
     min-height: 480px;
     max-height: 480px;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 

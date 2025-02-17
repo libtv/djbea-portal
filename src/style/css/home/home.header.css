@@ -65,7 +65,8 @@ li > a {
   border-radius: 0px 0px 50px 50px;
   display: flex;
   justify-content: left;
-  display: none; /* TODO 제거 요청 */
+  z-index: 9999;
+  display: none; /* TODO 김준호 지우기 */
 }
 
 .depth-tit {
@@ -216,6 +217,7 @@ li > a {
     background-color: #aaa;
     display: flex;
     flex-direction: column;
+    display: none;
   }
 
   .depth1 li + li {
@@ -286,5 +288,11 @@ li > a {
 
   .depth3 > li > a::before {
     top: 16px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .depth-tit {
+    padding-left: 15vw;
   }
 }
