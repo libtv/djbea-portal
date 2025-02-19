@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { HomeProvider } from "./route/home/home.provider";
 import { HomeHeader } from "./route/home/home.header";
 import { HomeContext } from "./route/home/home.context";
+import { HomeFooter } from "./route/home/home.footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <HomeProvider>
             <HomeHeader />
             <HomeContext />
+            <HomeFooter />
           </HomeProvider>
         }
       ></Route>
