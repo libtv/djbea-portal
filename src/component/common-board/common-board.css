@@ -127,3 +127,14 @@ table {
 .paging .next::before {
   transform: rotate(180deg);
 }
+
+/* mobile */
+@media (max-width: 980px) {
+  table {
+    font-size: 11px;
+  }
+
+  table td a {
+    font-size: 11px;
+  }
+}

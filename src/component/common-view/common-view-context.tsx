@@ -6,13 +6,16 @@ export function CommonViewContext() {
       </div>
       <ul className="info">
         <li>
-          <span>작성자</span>김*리
+          <span>작성자</span>
+          <p>김*리</p>
         </li>
         <li>
-          <span>작성일</span>2025/02/18 14:39
+          <span>작성일</span>
+          <p>2025/02/18 14:39</p>
         </li>
         <li>
-          <span>조회수</span>71
+          <span>조회수</span>
+          <p>71</p>
         </li>
       </ul>
       <div className="content">선정결과 안내(홈페이지 게재).pdf</div>

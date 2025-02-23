@@ -27,7 +27,7 @@ export function CommonBoardContext() {
             </td>
 
             <td aria-label="제목">
-              <a href="/board.es?mid=a20201000000&amp;bid=0101&amp;act=view&amp;list_no=12540&amp;tag=&amp;nPage=1">
+              <a href="/menu/view?menuId=123&viewId=123">
                 <i className="xi-new"></i>
                 <span className="new">새글</span> 대전광역시 우주기술 연구·활용 규제자유특구사업 특구사업자 선정 결과 안내
               </a>
