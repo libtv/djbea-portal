@@ -13,7 +13,7 @@ function App() {
   return (
     <Routes>
       <Route
-        path="/menu/:id"
+        path="/menu/*"
         element={
           <HomeProvider>
             <HomeHeader />
@@ -21,8 +21,8 @@ function App() {
             <MenuContext />
             <HomeFooter />
           </HomeProvider>
-        }
-      ></Route>
+        }></Route>
+
       <Route
         path="/*"
         element={
@@ -31,8 +31,7 @@ function App() {
             <HomeContext />
             <HomeFooter />
           </HomeProvider>
-        }
-      ></Route>
+        }></Route>
     </Routes>
   );
 }

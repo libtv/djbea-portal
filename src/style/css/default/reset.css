@@ -140,9 +140,27 @@ table {
   src: url("../../font/PretendardVariable.woff2");
 }
 
+@font-face {
+  font-family: "ONEMobileOTF";
+  src: url("../../font/ONEMobileOTF.otf");
+}
+
+input[type="button"],
+input[type="text"],
+input[type="submit"],
+input[type="password"],
+select {
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
 body {
   height: 100%;
-  font-family: "Pretendard", "SCDream", monospace;
+  font-family: "Pretendard", "SCDream", "ONEMobileOTF", monospace;
 }
 
 #root {
