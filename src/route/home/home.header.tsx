@@ -24,7 +24,7 @@ export function HomeHeader() {
                   </div>
                   <ul className="depth2">
                     <li>
-                      <a href="#">
+                      <a href="/menu/123">
                         <i>사업공고</i>
                       </a>
                       <ul className="depth3">
