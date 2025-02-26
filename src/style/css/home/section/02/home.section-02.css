@@ -12,13 +12,12 @@
   width: calc(100vw - 17px);
   height: 100%;
   transform: translateX(-50%);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(245, 246, 246, 1) 100%);
+  background: url("../../../../image/home/bg_wrap01.jpg") no-repeat 100% 120%;
   z-index: -1;
 }
 
 .section-02 .wrap-tit {
   width: 210px;
-  margin-top: 19px;
 }
 
 .wrap-tit .tit {

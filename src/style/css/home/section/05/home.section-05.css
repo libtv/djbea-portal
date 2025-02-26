@@ -11,19 +11,6 @@
   overflow: hidden;
 }
 
-.section-05::before {
-  position: absolute;
-  content: " ";
-  top: 0;
-  left: 50%;
-  width: calc(100vw - 20px);
-  height: 100%;
-  box-sizing: content-box;
-  transform: translateX(-50%);
-  background: #f3f4f5;
-  z-index: -1;
-}
-
 .commu-body {
   width: 100%;
   max-width: 100%;

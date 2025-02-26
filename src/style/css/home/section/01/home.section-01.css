@@ -9,6 +9,9 @@
   position: absolute;
   left: 0;
   top: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .section-01-srh {

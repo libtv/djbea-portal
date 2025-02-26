@@ -145,6 +145,15 @@ table {
   src: url("../../font/ONEMobileOTF.otf");
 }
 
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("../../font/GmarketSansBold.otf");
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("../../font/GmarketSansMedium.otf");
+}
+
 input[type="button"],
 input[type="text"],
 input[type="submit"],

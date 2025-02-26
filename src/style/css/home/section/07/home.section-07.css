@@ -1,0 +1,83 @@
+.section-07 {
+  font-family: "GmarketSansMedium";
+}
+
+.section-notice {
+  display: flex;
+  padding: 50px 0;
+  position: relative;
+  gap: 30px;
+}
+
+.section-notice-news {
+  flex: 1;
+}
+
+.section-notice-news ul {
+  min-height: 291px;
+  min-width: 691px;
+  background-color: aliceblue;
+}
+
+.section-notice-prog {
+  width: 344px;
+}
+
+.section-notice-prog h3 {
+  margin-bottom: 5px;
+  color: #222;
+  font-size: 18px;
+  letter-spacing: -1px;
+}
+
+.calendar {
+  width: 100%;
+  min-width: 100%;
+}
+
+.calendar_move {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  border-radius: 20px;
+  background: #ffe5ee;
+}
+
+.calendar_move span {
+  padding: 0 20px 0;
+  color: #3d3d3d;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: center;
+  display: block;
+  transform: translateY(25%);
+}
+
+.calendar_move a {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  text-indent: -9999px;
+  border-radius: 50%;
+}
+
+.calendar th,
+.calendar td {
+  width: calc(100% / 7 - 4.1px);
+  margin: 2px;
+  height: 35px;
+  background: #f6f6f6;
+  text-align: center;
+  border: 1px solid;
+}
+
+.calendar i {
+  display: block;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

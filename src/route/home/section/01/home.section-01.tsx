@@ -1,11 +1,13 @@
 import dreamImg from "../../../../style/image/home/main_dream.png";
 import testImg1 from "../../../../style/image/home/20250124021859927.jpg";
 import "../../../../style/css/home/section/01/home.section-01.css";
+import { HomeSection06 } from "../06/home.section-06";
 
 export function HomeSection01() {
   return (
     <div className="section-01">
       <div className="section-01-dream">
+        <img src={dreamImg} alt="" />
         <img src={dreamImg} alt="" />
       </div>
       <div className="section-01-srh">
@@ -41,6 +43,7 @@ export function HomeSection01() {
           </ul>
         </div>
       </div>
+      <HomeSection06></HomeSection06>
       <div className="srh-visual">
         <div className="swiper-box">
           <img src={testImg1} alt="" />
