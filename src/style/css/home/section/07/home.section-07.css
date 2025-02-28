@@ -33,6 +33,8 @@
 .calendar {
   width: 100%;
   min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 2px;
 }
 
 .calendar_move {
@@ -71,7 +73,6 @@
   height: 35px;
   background: #f6f6f6;
   text-align: center;
-  border: 1px solid;
 }
 
 .calendar i {

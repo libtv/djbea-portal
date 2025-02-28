@@ -21,3 +21,14 @@ button {
   color: #424242;
   text-decoration: none;
 }
+
+input,
+button {
+  padding: 0 40px 0 10px;
+  line-height: 20px;
+  height: 45px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  color: #444;
+}
