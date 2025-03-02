@@ -24,8 +24,7 @@ function App() {
             <MenuContext />
             <HomeFooter />
           </HomeProvider>
-        }
-      ></Route>
+        }></Route>
       <Route
         path="/rehome/*"
         element={
@@ -34,8 +33,7 @@ function App() {
             <ReHomeContext></ReHomeContext>
             <ReHomeFooter></ReHomeFooter>
           </>
-        }
-      ></Route>
+        }></Route>
       <Route
         path="/*"
         element={
@@ -44,8 +42,7 @@ function App() {
             <HomeContext />
             <HomeFooter />
           </HomeProvider>
-        }
-      ></Route>
+        }></Route>
     </Routes>
   );
 }

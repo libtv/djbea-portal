@@ -1,6 +1,14 @@
+import { useContext, useEffect } from "react";
 import "../../style/css/home/home.header.css";
+import { convertToObject } from "typescript";
+import { HomeContext } from "./home.provider";
+import { useSelector } from "react-redux";
 
 export function HomeHeader() {
+  const refresh = useSelector((state: any) => state.refresh);
+  const menu = useSelector((state: any) => state.menu.menu);
+  console.log(menu);
+
   return (
     <>
       <div className="home-header">
@@ -12,87 +20,49 @@ export function HomeHeader() {
 
           <div className="header-nav">
             <ul className="depth1">
-              <li>
-                <a href="#">
-                  <i>사업공고</i>
-                </a>
-                <div className="depth-cont">
-                  <div className="depth-tit">
-                    <strong>
-                      <span>일류 경제도시 대전</span>사업공고
-                    </strong>
-                  </div>
-                  <ul className="depth2">
-                    <li>
-                      <a href="/menu/123">
-                        <i>사업공고</i>
+              {menu &&
+                menu.map((v1: any) => {
+                  return (
+                    <li key={v1.MENUID}>
+                      <a href={"/menu/" + v1.MENUID}>
+                        <i>{v1.KNAME}</i>
                       </a>
-                      <ul className="depth3">
-                        <li>
-                          <a href="#">
-                            <i>사업공고</i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i>입찰공고</i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i>입주공고</i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i>채용공고</i>
-                          </a>
-                        </li>
-                      </ul>
+                      <div className="depth-cont">
+                        <div className="depth-tit">
+                          <strong>
+                            <span>일류 경제도시 대전</span>사업공고
+                          </strong>
+                        </div>
+                        <ul className="depth2">
+                          {v1.CHILDREN &&
+                            v1.CHILDREN.map((v2: any) => {
+                              return (
+                                <li key={v2.MENUID}>
+                                  <a href={"/menu/" + v2.MENUID}>
+                                    <i>{v2.KNAME}</i>
+                                  </a>
+                                  <ul className="depth3">
+                                    {v2.CHILDREN &&
+                                      v2.CHILDREN.map((v3: any) => {
+                                        return (
+                                          <>
+                                            <li key={v3.MENUID}>
+                                              <a href={"/menu/" + v3.MENUID}>
+                                                <i>{v3.KNAME}</i>
+                                              </a>
+                                            </li>
+                                          </>
+                                        );
+                                      })}
+                                  </ul>
+                                </li>
+                              );
+                            })}
+                        </ul>
+                      </div>
                     </li>
-                    <li>
-                      <a href="#">
-                        <i>입찰공고</i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i>입주공고</i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i>채용공고</i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a href="#">
-                  <i>정보공개</i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>기업지원</i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>참여마당</i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>오시는길</i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i>기관소개</i>
-                </a>
-              </li>
+                  );
+                })}
             </ul>
           </div>
         </div>
