@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 export function HomeHeader() {
   const refresh = useSelector((state: any) => state.refresh);
   const menu = useSelector((state: any) => state.menu.menu);
-  console.log(menu);
 
   return (
     <>
@@ -30,7 +29,8 @@ export function HomeHeader() {
                       <div className="depth-cont">
                         <div className="depth-tit">
                           <strong>
-                            <span>일류 경제도시 대전</span>사업공고
+                            <span>일류 경제도시 대전</span>
+                            {v1.KNAME}
                           </strong>
                         </div>
                         <ul className="depth2">

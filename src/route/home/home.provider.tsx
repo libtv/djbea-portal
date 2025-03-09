@@ -7,6 +7,7 @@ export const HomeContext = createContext(null as any);
 
 export const HomeProvider = ({ children }: any) => {
   const dispatch = useDispatch();
+  const menu: any = useSelector((state: any) => state.menu.menu);
   const refresh: any = useSelector((state: any) => state.refresh);
 
   useEffect(() => {
@@ -14,11 +15,13 @@ export const HomeProvider = ({ children }: any) => {
   }, [refresh]);
 
   const createMenu = function () {
-    instance.get("/menu").then((res) => {
-      let body = res.data.body;
-      let data = body.data;
-      dispatch(create(data));
-    });
+    if (menu == "") {
+      instance.get("/menu").then((res) => {
+        let body = res.data.body;
+        let data = body.data;
+        dispatch(create(data));
+      });
+    }
   };
 
   return <HomeContext.Provider value={{}}>{children}</HomeContext.Provider>;
