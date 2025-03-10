@@ -15,39 +15,41 @@ import { MenuProvider } from "./route/menu/menu.provider";
 
 function App() {
   return (
-    <Routes>
-      <Route
-        path="/menu/*"
-        element={
-          <MenuProvider>
-            <HomeHeader />
-            <MenuHeader />
-            <MenuContext />
-            <HomeFooter />
-          </MenuProvider>
-        }
-      ></Route>
-      <Route
-        path="/rehome/*"
-        element={
-          <>
-            <ReHomeHeader></ReHomeHeader>
-            <ReHomeContext></ReHomeContext>
-            <ReHomeFooter></ReHomeFooter>
-          </>
-        }
-      ></Route>
-      <Route
-        path="/*"
-        element={
-          <HomeProvider>
-            <HomeHeader />
-            <HomeContext />
-            <HomeFooter />
-          </HomeProvider>
-        }
-      ></Route>
-    </Routes>
+    <HomeProvider>
+      <Routes>
+        <Route
+          path="/menu/*"
+          element={
+            <MenuProvider>
+              <HomeHeader />
+              <MenuHeader />
+              <MenuContext />
+              <HomeFooter />
+            </MenuProvider>
+          }
+        ></Route>
+        <Route
+          path="/rehome/*"
+          element={
+            <>
+              <ReHomeHeader></ReHomeHeader>
+              <ReHomeContext></ReHomeContext>
+              <ReHomeFooter></ReHomeFooter>
+            </>
+          }
+        ></Route>
+        <Route
+          path="/*"
+          element={
+            <>
+              <HomeHeader />
+              <HomeContext />
+              <HomeFooter />
+            </>
+          }
+        ></Route>
+      </Routes>
+    </HomeProvider>
   );
 }
 
