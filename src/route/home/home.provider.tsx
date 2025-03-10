@@ -11,18 +11,16 @@ export const HomeProvider = ({ children }: any) => {
   const refresh: any = useSelector((state: any) => state.refresh);
 
   useEffect(() => {
-    createMenu();
-  }, [refresh]);
-
-  const createMenu = function () {
-    if (menu == "") {
-      instance.get("/menu").then((res) => {
+    async function fetchData() {
+      if (menu === "") {
+        let res = await instance.get("/menu");
         let body = res.data.body;
         let data = body.data;
         dispatch(create(data));
-      });
+      }
     }
-  };
+    fetchData();
+  }, [refresh, menu]);
 
   return <HomeContext.Provider value={{}}>{children}</HomeContext.Provider>;
 };

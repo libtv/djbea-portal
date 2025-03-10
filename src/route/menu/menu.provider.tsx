@@ -58,8 +58,7 @@ export const MenuProvider = ({ children }: any) => {
   const setDepth = function () {
     let depth3: any = null;
     let depth2: any = null;
-    let find_menu_id = current_menu.HIGHRID;
-    console.log(find_menu_id);
+    let find_menu_id = curr_menu.HIGHRID;
 
     menu.map((v: any) => {
       if (v.MENUID === find_menu_id) {
@@ -105,16 +104,17 @@ export const MenuProvider = ({ children }: any) => {
       }
     });
 
-    console.log(depth3);
     dispatch(setDepth2(depth2));
     dispatch(setDepth3(depth3));
   };
 
   useEffect(() => {
-    getCurrentMenu(menu_id);
-    setCurrentDepth3();
-    setDepth();
-  }, [refresh, menu]);
+    if (Array.isArray(menu)) {
+      getCurrentMenu(menu_id);
+      setCurrentDepth3();
+      if (curr_menu !== "") setDepth();
+    }
+  }, [menu, curr_menu]);
 
   return <MenuContext.Provider value={{}}>{children}</MenuContext.Provider>;
 };
