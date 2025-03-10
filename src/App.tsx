@@ -11,6 +11,7 @@ import { MenuHeader } from "./route/menu/menu.header";
 import { ReHomeContext } from "./route/rehome/home.context";
 import { ReHomeFooter } from "./route/rehome/home.footer";
 import { ReHomeHeader } from "./route/rehome/home.header";
+import { MenuProvider } from "./route/menu/menu.provider";
 
 function App() {
   return (
@@ -18,13 +19,14 @@ function App() {
       <Route
         path="/menu/*"
         element={
-          <HomeProvider>
+          <MenuProvider>
             <HomeHeader />
             <MenuHeader />
             <MenuContext />
             <HomeFooter />
-          </HomeProvider>
-        }></Route>
+          </MenuProvider>
+        }
+      ></Route>
       <Route
         path="/rehome/*"
         element={
@@ -33,7 +35,8 @@ function App() {
             <ReHomeContext></ReHomeContext>
             <ReHomeFooter></ReHomeFooter>
           </>
-        }></Route>
+        }
+      ></Route>
       <Route
         path="/*"
         element={
@@ -42,7 +45,8 @@ function App() {
             <HomeContext />
             <HomeFooter />
           </HomeProvider>
-        }></Route>
+        }
+      ></Route>
     </Routes>
   );
 }
