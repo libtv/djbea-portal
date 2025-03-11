@@ -14,7 +14,7 @@ export function HomeSection06() {
             <i>검색</i>
           </button>
         </div>
-        <a className="" href="#">
+        <a className="alive-policy" href="#">
           <span>신청 가능한 정책</span>
           <strong>
             <i>9</i>건

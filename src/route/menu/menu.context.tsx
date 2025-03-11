@@ -9,7 +9,7 @@ export function MenuContext() {
       <div className="menu-context">
         <h3 className="context-tit">입주공고</h3>
         <Routes>
-          <Route path="/view" element={<CommonViewComponent></CommonViewComponent>}></Route>
+          <Route path="/:id/view" element={<CommonViewComponent></CommonViewComponent>}></Route>
           <Route path="/:id" element={<CommonBoardComponent></CommonBoardComponent>}></Route>
         </Routes>
       </div>

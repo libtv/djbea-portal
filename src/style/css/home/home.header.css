@@ -83,7 +83,8 @@ li > a {
   padding-left: calc((100vw - 1400px) / 5);
   padding-top: 47px;
   background-color: #f6f1f1;
-  padding-left: 15vw;
+  display: flex;
+  justify-content: center;
 }
 
 .depth-tit strong {

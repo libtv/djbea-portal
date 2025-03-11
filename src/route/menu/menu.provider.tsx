@@ -1,6 +1,6 @@
 import React, { createContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { create, setDepth2, setDepth3, setMenu } from "../../store/home.store";
+import { setDepth2, setDepth3, setMenu } from "../../store/home.store";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export const MenuContext = createContext(null as any);
@@ -45,6 +45,7 @@ export const MenuProvider = ({ children }: any) => {
 
   /** 1, 2 depth 일 경우, 리다이렉트 */
   const setCurrentDepth3 = function () {
+    console.log(current_menu);
     if (current_menu.DEPTH === "1") {
       navigate("/menu/" + current_menu.CHILDREN[0].CHILDREN[0].MENUID);
       dispatch(setMenu(current_menu.CHILDREN[0].CHILDREN[0]));
