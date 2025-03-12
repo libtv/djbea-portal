@@ -1,0 +1,122 @@
+.section-08 {
+  position: relative;
+  font-family: "KOHIBaeum", "GmarketSansMedium";
+  font-size: 20px;
+
+  .visual-video {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    overflow: hidden;
+  }
+
+  .visual-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+  }
+
+  .srh-total {
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    height: 50px;
+    width: 80%;
+    border: 3px solid #de142a;
+    border-right: none;
+    border-radius: 50px;
+    margin: 0 auto;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: #424242;
+    font-size: 0.8rem;
+  }
+
+  .srh-total::after {
+    position: absolute;
+    content: " ";
+    right: 0;
+    width: 48px;
+    height: 48px;
+    margin-top: -1px;
+    border-radius: 50%;
+    background-color: #de142a;
+    background-image: url("../../../../style/image/home/ico_srh.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .wrap {
+    padding: 27px 20px 0px 20px;
+  }
+
+  .search-form-pc {
+    display: none;
+  }
+}
+
+/* 태블릿 */
+@media (min-width: 620px) and (max-width: 1200px) {
+  .section-08 {
+    .search-form-mobile {
+      display: none;
+    }
+
+    .search-form-pc {
+      position: absolute;
+      width: 100%;
+      height: 200px;
+      bottom: 10%;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-form-pc button {
+      width: 66px;
+      height: 66px;
+      background: #fff url("https://www.busan.go.kr/humanframe/theme/busan22/assets/img/main/ico_search_b.png") no-repeat 50% / 25px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+/* mobile */
+@media (min-width: 1200px) {
+  .section-08 {
+    .visual-video {
+      height: 100vh;
+    }
+
+    .search-form-mobile {
+      display: none;
+    }
+
+    .search-form-pc {
+      position: absolute;
+      width: 100%;
+      height: 200px;
+      bottom: 10%;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search-form-pc button {
+      width: 66px;
+      height: 66px;
+      background: #fff url("https://www.busan.go.kr/humanframe/theme/busan22/assets/img/main/ico_search_b.png") no-repeat 50% / 25px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

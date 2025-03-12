@@ -32,3 +32,13 @@ button {
   border-radius: 10px;
   color: #444;
 }
+
+.wrap {
+  padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

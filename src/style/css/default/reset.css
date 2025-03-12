@@ -154,6 +154,11 @@ table {
   src: url("../../font/GmarketSansMedium.otf");
 }
 
+@font-face {
+  font-family: "KOHIBaeum";
+  src: url("../../font/KOHIBaeumOTF.otf");
+}
+
 input[type="button"],
 input[type="text"],
 input[type="submit"],
@@ -168,6 +173,7 @@ select {
 }
 
 body {
+  min-width: 360px;
   height: 100%;
   font-family: "Pretendard", "SCDream", "ONEMobileOTF", monospace;
 }
