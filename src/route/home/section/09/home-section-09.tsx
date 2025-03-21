@@ -1,8 +1,15 @@
 import "./home-section-09.css";
+import aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export function HomeSection09() {
+  useEffect(() => {
+    aos.init();
+  }, []);
+
   return (
-    <div className="section-09">
+    <div className="section-09" data-aos="fade-up" data-aos-duration="2000">
       <div className="wrap">
         <h2 className="title">안내</h2>
       </div>
@@ -51,7 +58,7 @@ export function HomeSection09() {
           <span>중소기업지원</span>
         </li>
         <li>
-          <i className="icon ico-economic"></i>``
+          <i className="icon ico-economic"></i>
           <span>소상공인지원</span>
         </li>
         <li>

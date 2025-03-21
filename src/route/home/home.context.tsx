@@ -8,6 +8,8 @@ import { HomeSection06 } from "./section/06/home.section-06";
 import { HomeSection07 } from "./section/07/home.section-07";
 import { HomeSection08 } from "./section/08/home-section-08";
 import { HomeSection09 } from "./section/09/home-section-09";
+import { HomeSection10 } from "./section/10/home-section-10";
+import { HomeSection11 } from "./section/11/home-section-11";
 
 export function HomeContext() {
   return (
@@ -23,6 +25,8 @@ export function HomeContext() {
         */}
       <HomeSection08></HomeSection08>
       <HomeSection09></HomeSection09>
+      <HomeSection10></HomeSection10>
+      <HomeSection11></HomeSection11>
     </div>
   );
 }
