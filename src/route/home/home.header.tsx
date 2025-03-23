@@ -5,7 +5,6 @@ import { HomeContext } from "./home.provider";
 import { useSelector } from "react-redux";
 
 export function HomeHeader() {
-  const refresh = useSelector((state: any) => state.refresh);
   const menu = useSelector((state: any) => state.menu.menu);
 
   return (
@@ -48,7 +47,7 @@ export function HomeHeader() {
                                           <>
                                             <li key={v3.MENUID}>
                                               <a href={"/menu/" + v3.MENUID}>
-                                                <i>{v3.KNAME}</i>
+                                                <i key={v3.MENUID}>{v3.KNAME}</i>
                                               </a>
                                             </li>
                                           </>

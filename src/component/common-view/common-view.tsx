@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { CommonViewContext } from "./common-view-context";
 import "./common-view.css";
 
