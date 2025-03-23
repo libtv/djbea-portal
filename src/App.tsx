@@ -19,7 +19,7 @@ function App() {
     <HomeProvider>
       <Routes>
         <Route
-          path="/menu/*"
+          path="/menu/:menu_id/*"
           element={
             <MenuProvider>
               <HomeHeader />
@@ -27,8 +27,7 @@ function App() {
               <MenuContext />
               <HomeFooter />
             </MenuProvider>
-          }
-        ></Route>
+          }></Route>
         <Route
           path="/rehome/*"
           element={
@@ -37,8 +36,7 @@ function App() {
               <ReHomeContext></ReHomeContext>
               <ReHomeFooter></ReHomeFooter>
             </>
-          }
-        ></Route>
+          }></Route>
         <Route
           path="/*"
           element={
@@ -47,8 +45,7 @@ function App() {
               <HomeContext />
               <HomeFooter />
             </>
-          }
-        ></Route>
+          }></Route>
       </Routes>
     </HomeProvider>
   );

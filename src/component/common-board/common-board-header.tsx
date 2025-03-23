@@ -1,26 +1,17 @@
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import instance from "../../utils/axios";
+import { useContext, useEffect, useRef, useState } from "react";
+import { BoardContext } from "../board/board.provider";
+import { useSearchParams } from "react-router-dom";
 
 export function CommonBoardHeader() {
-  const curr_menu: any = useSelector((state: any) => state.menu.current);
-  const menu_id: string = curr_menu.MENUID;
-  const [count, setCount] = useState<number>(0);
+  const my_context = useContext(BoardContext);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const inputRef: any = useRef(null);
+  const count = my_context.count.count;
 
-  useEffect(() => {
-    async function fetchData() {
-      let res = await instance.get("/content/count", {
-        params: {
-          menu_id: menu_id,
-        },
-      });
-      let body = res.data.body;
-      let data = body.data;
-
-      setCount(data.count);
-    }
-    fetchData();
-  }, []);
+  const searchOnClickEvent = function () {
+    let search = inputRef.current?.value;
+    setSearchParams({ search: search });
+  };
 
   return (
     <div className="board-header">
@@ -35,8 +26,8 @@ export function CommonBoardHeader() {
           <option value="N">작성자</option>
         </select>
 
-        <input type="text" title="검색내용 입력" className="input-temp" name="keyWord" value="" />
-        <button type="submit" className="search-btn">
+        <input type="text" title="검색내용 입력" className="input-temp" name="keyWord" ref={inputRef} />
+        <button type="submit" className="search-btn" onClick={searchOnClickEvent}>
           검색
         </button>
       </div>

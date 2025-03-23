@@ -1,7 +1,7 @@
 import React, { createContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setDepth2, setDepth3, setMenu } from "../../store/home.store";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 export const MenuContext = createContext(null as any);
 
@@ -11,13 +11,11 @@ export const MenuProvider = ({ children }: any) => {
   const menu: any = useSelector((state: any) => state.menu.menu);
   const curr_menu: any = useSelector((state: any) => state.menu.current);
   const refresh: any = useSelector((state: any) => state.refresh);
-
-  const { pathname } = useLocation();
-  const menu_id = pathname.split("/")[2];
+  const { menu_id } = useParams();
 
   let current_menu: any;
 
-  const getCurrentMenu = function (menu_id: string) {
+  const getCurrentMenu = function (menu_id: string | any) {
     menu.map((v: any) => {
       if (v.MENUID === menu_id) {
         dispatch(setMenu(v));

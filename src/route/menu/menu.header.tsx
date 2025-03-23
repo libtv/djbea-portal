@@ -3,6 +3,7 @@ import "../../style/css/menu/menu.header.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { refresh } from "../../store/refresh.store";
+import { v4 as uuidv4 } from "uuid";
 
 export function MenuHeader() {
   const menu: any = useSelector((state: any) => state.menu.current);
@@ -44,13 +45,11 @@ export function MenuHeader() {
           <ul className={`con-area2 ${isShow2 ? "active" : ""}`}>
             {depth2 &&
               depth2.CHILDREN.map((v: any) => (
-                <>
-                  <li className="breadcrumbs-item">
-                    <button type="button" className="toggle-btn" onClick={setLink(v.MENUID)}>
-                      {v.KNAME}
-                    </button>
-                  </li>
-                </>
+                <li className="breadcrumbs-item" key={uuidv4()}>
+                  <button type="button" className="toggle-btn" onClick={setLink(v.MENUID)}>
+                    {v.KNAME}
+                  </button>
+                </li>
               ))}
           </ul>
         </li>
@@ -61,13 +60,11 @@ export function MenuHeader() {
           <ul className={`con-area2 ${isShow3 ? "active" : ""}`}>
             {depth3 &&
               depth3.CHILDREN.map((v: any) => (
-                <>
-                  <li className="breadcrumbs-item">
-                    <button type="button" className="toggle-btn" onClick={setLink(v.MENUID)}>
-                      {v.KNAME}
-                    </button>
-                  </li>
-                </>
+                <li className="breadcrumbs-item" key={uuidv4()}>
+                  <button type="button" className="toggle-btn" onClick={setLink(v.MENUID)}>
+                    {v.KNAME}
+                  </button>
+                </li>
               ))}
           </ul>
         </li>

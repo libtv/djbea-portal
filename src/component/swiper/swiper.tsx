@@ -5,6 +5,7 @@ import "./swiper.css";
 import "swiper/css/grid";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay, Grid } from "swiper/modules";
+import { v4 as uuidv4 } from "uuid";
 
 export const MakeSwiper = function ({ swiperList, breakPoints, slidesperView, grid }: any) {
   return (
@@ -17,10 +18,9 @@ export const MakeSwiper = function ({ swiperList, breakPoints, slidesperView, gr
         navigation={true}
         pagination={false}
         breakpoints={breakPoints}
-        modules={[Pagination, Navigation, Grid]}
-      >
+        modules={[Pagination, Navigation, Grid]}>
         {swiperList.map((v: any) => (
-          <SwiperSlide>{v}</SwiperSlide>
+          <SwiperSlide key={uuidv4()}>{v}</SwiperSlide>
         ))}
       </Swiper>
     </>

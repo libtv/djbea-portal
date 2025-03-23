@@ -3,6 +3,7 @@ import "../../style/css/home/home.header.css";
 import { convertToObject } from "typescript";
 import { HomeContext } from "./home.provider";
 import { useSelector } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
 
 export function HomeHeader() {
   const menu = useSelector((state: any) => state.menu.menu);
@@ -21,7 +22,7 @@ export function HomeHeader() {
               {menu &&
                 menu.map((v1: any) => {
                   return (
-                    <li key={v1.MENUID}>
+                    <li key={uuidv4()}>
                       <a href={"/menu/" + v1.MENUID}>
                         <i>{v1.KNAME}</i>
                       </a>
@@ -36,7 +37,7 @@ export function HomeHeader() {
                           {v1.CHILDREN &&
                             v1.CHILDREN.map((v2: any) => {
                               return (
-                                <li key={v2.MENUID}>
+                                <li key={uuidv4()}>
                                   <a href={"/menu/" + v2.MENUID}>
                                     <i>{v2.KNAME}</i>
                                   </a>
@@ -45,9 +46,9 @@ export function HomeHeader() {
                                       v2.CHILDREN.map((v3: any) => {
                                         return (
                                           <>
-                                            <li key={v3.MENUID}>
+                                            <li key={uuidv4()}>
                                               <a href={"/menu/" + v3.MENUID}>
-                                                <i key={v3.MENUID}>{v3.KNAME}</i>
+                                                <i>{v3.KNAME}</i>
                                               </a>
                                             </li>
                                           </>

@@ -1,29 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import instance from "../../utils/axios";
 import { formatDate } from "../../utils/date";
+import { BoardContext } from "../board/board.provider";
+import { v4 as uuidv4 } from "uuid";
 
 export function CommonBoardContext() {
   const curr_menu: any = useSelector((state: any) => state.menu.current);
-  const menu_id: string = curr_menu.MENUID;
-  const [content, setContent] = useState<Array<any>>([]);
+  const my_context = useContext(BoardContext);
+  const content = my_context.content;
 
-  useEffect(() => {
-    async function fetchData() {
-      let res = await instance.get("/content", {
-        params: {
-          menu_id: menu_id,
-          paging: 1,
-          view_count: 10,
-        },
-      });
-      let body = res.data.body;
-      let data = body.data;
-
-      setContent(data);
-    }
-    fetchData();
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className="board-scroll">
@@ -47,8 +34,8 @@ export function CommonBoardContext() {
           </tr>
         </thead>
         <tbody>
-          {content.map((v) => (
-            <>
+          {content.map((v: any) => (
+            <tr key={uuidv4()}>
               <td className="m_hidden" aria-label="번호">
                 {v.CONTENTID}
               </td>
@@ -70,7 +57,7 @@ export function CommonBoardContext() {
 
                 <a href="/boardDownload.es?bid=0101&amp;list_no=12540&amp;seq=1" />
               </td>
-            </>
+            </tr>
           ))}
         </tbody>
       </table>
